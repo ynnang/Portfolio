@@ -1,0 +1,30 @@
+.site-header{border-bottom:1px solid #eee;background:transparent}
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:.75rem 1rem;
+}
+.brand{font-weight:700}
+.nav-links{
+  display:flex;
+  gap:1rem;
+  list-style:none;
+  margin:0;padding:0;
+}
+.nav-links a{padding:.5rem .75rem;border-radius:6px}
+.controls{display:flex;gap:.5rem;align-items:center}
+
+/* hamburger (mobile) */
+.hamburger{display:none;background:none;border:0;padding:.25rem}
+.hamburger .bar{display:block;width:18px;height:2px;background:currentColor;margin:3px 0}
+
+/* responsive */
+@media (max-width:800px){
+  .nav-links{position:fixed;right:0;top:0;height:100%;width:240px;background:var(--bg);flex-direction:column;padding:3rem 1rem;transform:translateX(100%);transition:transform .25s ease}
+  .nav-links.active{transform:translateX(0)}
+  .hamburger{display:block}
+  .controls{gap:.25rem}
+  body.dark .nav-links{background:var(--bg-dark)}
+}

@@ -1,0 +1,10 @@
+.about {
+  background: transparent;
+  margin: 40px 20px; /* Add margin to the container for spacing */
+}
+
+.about p {
+  max-width: 70ch;
+  margin: 1rem 0; /* Vertical margin for spacing between paragraphs */
+  line-height: 1.6; /* Added line-height for better readability */
+}

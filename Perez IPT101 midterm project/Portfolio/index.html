@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+
+  <!-- CSS (separate files) -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="brand">MyPortfolio</div>
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+
+      <div class="controls">
+        <select id="langSelect" aria-label="Language selector">
+          <option value="en">English</option>
+          <option value="fil">Filipino</option>
+        </select>
+
+        <button id="darkToggle" class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 data-i18n="hero_title">Hi, I’m Honey Jane Ina Perez - Future Web Developer</h1>
+        <p data-i18n="hero_sub">I build modular, accessible, and responsive websites.</p>
+        <a class="cta" href="#contact" data-i18n="hero_cta">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2 data-i18n="about_title">About Me</h2>
+      <p data-i18n="about_text">
+        I’m a developer focused on UI and frontend architecture. I enjoy modular code and clean design.
+      </p>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <h2 data-i18n="portfolio_title">Selected Work</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Project A</h3>
+          <h4>Daily Reminder for Projects</br></h4>
+          <p>A small program or app that lets you list your 
+            tasks or projects for the day and sends you 
+            notifications at set times, so you won’t forget 
+            what to work on.</p>
+        </article>
+        <article class="project">
+          <h3>Project B</h3>
+          <h4>Habit Tracker Game</br></h4>
+          <p>A fun app where you set daily habits or goals, 
+            and every time you complete them, you earn points 
+            or unlock small rewards-turning self-improvement 
+            into a game.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+   <section id="contact" class="contact">
+  <h2 data-i18n="contact_title">Contact</h2>
+  <form id="contactForm" autocomplete="on" novalidate>
+    <label for="name" data-i18n="label_name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your name" />
+
+    <label for="email" data-i18n="label_email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" />
+
+    <label for="message" data-i18n="label_message">Message</label>
+    <textarea id="message" name="message" rows="6" maxlength="150" placeholder="Write your message..."></textarea>
+
+    <div class="char-row">
+      <small id="charCount">0 / 150</small>
+      <button type="submit" id="submitBtn" data-i18n="btn_send">Send</button>
+    </div>
+  </form>
+  <p id="saveNotice" class="save-note" aria-live="polite"></p>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> MyPortfolio</small>
+  </footer>
+
+  <!-- JS (separate files) -->
+  <script src="js/toggle-bar.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/language-selector.js"></script>
+  <script src="js/form-persistence.js"></script>
+  <script src="js/char-limit.js"></script>
+  <script>
+    // small runtime bits
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.hero{
+  display:flex;
+  align-items:center;
+  min-height:60vh;
+  background:linear-gradient(180deg, rgba(37,99,235,0.06), transparent);
+}
+.hero .hero-content{max-width:720px;padding:2rem}
+.hero h1{font-size:2rem}
+.hero p{color:var(--muted)}
+.cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;border-radius:8px;background:var(--primary);color:white}
+body.dark .cta{background:var(--accent);color:#111}

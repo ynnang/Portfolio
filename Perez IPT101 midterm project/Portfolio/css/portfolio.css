@@ -1,0 +1,17 @@
+.portfolio .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 20px; /* Added margin around the grid container */
+}
+
+.project {
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 10px; /* Added margin between individual projects */
+}
+
+body.dark .project {
+  border-color: #1f2937;
+}
